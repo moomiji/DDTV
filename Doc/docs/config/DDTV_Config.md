@@ -102,17 +102,17 @@ HideIconState=false
             RoomListConfig,
             /// <summary>
             /// 默认下载总文件夹路径 (应该是一个绝对\相对路径目录)
-            /// 组：Download	默认值：./Rec/
+            /// 组：Download		默认值：./Rec/
             /// </summary>
             DownloadPath,
             /// <summary>
             /// 临时文件存放文件夹路径 (应该是一个绝对\相对路径文件地址)
-            /// 组：Download	默认值：./tmp/
+            /// 组：Download		默认值：./tmp/
             /// </summary>
             TmpPath,
             /// <summary>
             /// 默认下载文件夹名字格式 (应该为关键字组合，如:{KEY}_{KEY})
-            /// 组：Download	默认值：{ROOMID}_{NAME}			可选值：ROOMID|NAME|DATE|TIME|TITLE|R
+            /// 组：Download		默认值：{ROOMID}_{NAME}			可选值：ROOMID|NAME|DATE|TIME|TITLE|R
             /// </summary>
             DownloadDirectoryName,
             /// <summary>
