@@ -26,7 +26,11 @@ jobs:
       with:
         commit-message: 更新依赖于CoreConfigClass.cs的文件
         title: 自动更新依赖于CoreConfigClass.cs的文件
-        body: '请检查以下 4 个文件：`Doc\docs\API\README.md`、`Doc\docs\config\DDTV_Config.md`、`Docker\01-checkup.sh`、`docker-ddtv.env`'
+        body: |
+          请检查以下 4 个文件：
+          `Doc\docs\API\README.md`
+          `Doc\docs\config\DDTV_Config.md`
+          `Docker\01-checkup.sh`
+          `docker-ddtv.env`'
         branch: auto-update
-        labels: auto-pr
         delete-branch: true
