@@ -17,7 +17,6 @@ jobs:
     - name: update
       id: update
       run: |
-        echo "::set-output name=timestamp::$(date +'%s%N')"
         mkdir ./tmp.d
         cp ./DDTV_Core/SystemAssembly/ConfigModule/CoreConfigClass.cs ./tmp.d/CoreConfigClass.cs
         chmod +x ./Docker/update.GitHubActions.sh && ./Docker/update.GitHubActions.sh
@@ -28,4 +27,6 @@ jobs:
         commit-message: 更新依赖于CoreConfigClass.cs的文件
         title: 自动更新依赖于CoreConfigClass.cs的文件
         body: '请检查以下 4 个文件：`Doc\docs\API\README.md`、`Doc\docs\config\DDTV_Config.md`、`Docker\01-checkup.sh`、`docker-ddtv.env`'
-        branch: auto-update-${{ steps.update.outputs.timestamp }}
+        branch: auto-update
+        labels: auto-pr
+        delete-branch: true
