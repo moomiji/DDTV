@@ -105,10 +105,11 @@ jobs:
 
       - name: Docker Release
         uses: moomiji/docker-ddtv@v5
+        if: ${{ contains(matrix.runtime, 'linux') }}
         with:
-          push:       ${{ contains(matrix.runtime, 'linux') }}
+          push:       true
           repo:       ddtv/cli
-          path:       CLI/build_output
+          path:       ${{ github.workspace }}/CLI/build_output
           version:    ${{ github.ref_name }}
           runtime:    ${{ matrix.runtime }}
           image_id:   ${{ contains(matrix.runtime, 'musl') && 'alpine' || 'debian' }}
